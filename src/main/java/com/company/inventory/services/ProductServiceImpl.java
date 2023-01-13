@@ -39,7 +39,7 @@ public class ProductServiceImpl implements IProductService {
 			// Busca categoria para setearla en el objeto producto
 			Optional<Category> category = categoryDao.findById(categoryId);
 			
-			if (category.isEmpty()) {
+			if (category.isPresent()) {
 				product.setCategory(category.get());
 			} else {
 				response.setMetadata("Respuesta nok", "-1", "Categoria no encontrada asociada al producto");
