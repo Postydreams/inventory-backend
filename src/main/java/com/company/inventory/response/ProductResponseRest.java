@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 public class ProductResponseRest extends ResponseRest{
 
-	private ProductResponse producto = new ProductResponse(); 
+	private ProductResponse product = new ProductResponse(); 
 }
