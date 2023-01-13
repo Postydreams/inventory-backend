@@ -1,5 +1,11 @@
 package com.company.inventory.services;
 
-public interface IProductService {
+import org.springframework.http.ResponseEntity;
 
+import com.company.inventory.model.Product;
+import com.company.inventory.response.ProductResponseRest;
+
+public interface IProductService {
+	
+	public ResponseEntity<ProductResponseRest> save(Product product, Long categoryId);
 }
